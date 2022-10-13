@@ -408,7 +408,7 @@ class MachineOperations:
     # Changes made to the keywords module should be reflected in the whole program rather than having to rewrite the whole program to reflect a change
     # If constant values were used here then in the case where an instruction opcode is changed, 
     #   this module will also have to be changed rather than only just changing the keywords module (the module that stores the actual opcode-instruction mapping)
-    instructionMapping: dict[int, function] = {
+    instructionMapping: dict[int, "function"] = {
         KeyWords.INSTRUCTION_SET[KeyWords.HLT]: HLT,
         KeyWords.INSTRUCTION_SET[KeyWords.ADD]: ADD,
         KeyWords.INSTRUCTION_SET[KeyWords.SUB]: SUB,
